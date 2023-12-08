@@ -27,3 +27,11 @@ model Catalog {
   name      String
   products  Product[]
 }
+
+model Order{
+  id  Int  @id @default(autoincrement())
+  nama  String
+  adress String @db.Text()
+  Payment String
+  Total   Int
+}
