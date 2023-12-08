@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", async (req, res) => {
-	res.send("here is the response");
+	res.send("Server Is Already Access!");
 });
 
 app.get("/hello", async (req, res) => {
