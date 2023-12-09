@@ -1,9 +1,9 @@
 -- CreateTable
 CREATE TABLE `Order` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
-    `nama` VARCHAR(191) NOT NULL,
+    `nama` VARCHAR(2000) NOT NULL,
     `adress` TEXT NOT NULL,
-    `Payment` VARCHAR(191) NOT NULL,
+    `Payment` VARCHAR(2000) NOT NULL,
     `Total` INTEGER NOT NULL,
 
     PRIMARY KEY (`id`)

@@ -1,9 +1,9 @@
 -- CreateTable
 CREATE TABLE `Product` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
-    `name` VARCHAR(191) NOT NULL,
+    `name` VARCHAR(2000) NOT NULL,
     `price` INTEGER NOT NULL,
-    `imageUrl` VARCHAR(191) NULL,
+    `imageUrl` VARCHAR(2000) NULL,
     `catalogId` INTEGER NULL,
 
     INDEX `Product_catalogId_fkey`(`catalogId`),
@@ -13,7 +13,7 @@ CREATE TABLE `Product` (
 -- CreateTable
 CREATE TABLE `Catalog` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
-    `name` VARCHAR(191) NOT NULL,
+    `name` VARCHAR(2000) NOT NULL,
 
     PRIMARY KEY (`id`)
 ) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
