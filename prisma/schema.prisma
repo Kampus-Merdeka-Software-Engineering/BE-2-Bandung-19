@@ -12,26 +12,27 @@ datasource db {
 
 // Model 
 model Product {
-  id        Int      @id @default(autoincrement())
-  name      String
+  id        Int      @id @default(autoincrement()) 
+  name      String  @db.VarChar(255)
   price     Int
-  imageUrl  String?
+  imageUrl  String? @db.VarChar(255)
   catalogId Int?
   Catalog   Catalog? @relation(fields: [catalogId], references: [id])
 
   @@index([catalogId], map: "Product_catalogId_fkey")
+  
 }
 
 model Catalog {
   id        Int       @id @default(autoincrement())
-  name      String
+  name      String    @db.VarChar(255)
   products  Product[]
 }
 
 model Order{
   id  Int  @id @default(autoincrement())
-  nama  String
+  nama  String  @db.VarChar(255)
   adress String @db.Text()
-  Payment String
+  Payment String  @db.VarChar(255)
   Total   Int
 }
